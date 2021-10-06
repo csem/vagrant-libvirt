@@ -2047,6 +2047,24 @@ $ bundle exec vagrant up --provider=libvirt
 
 **IMPORTANT NOTE:** bundle is crucial. You need to use bundled Vagrant.
 
+## Building
+
+Use the following command with expected output:
+
+```bash
+$ ~/vagrant-libvirt$ rake build 
+rm -rf /path/to/vagrant-libvirt/lib/vagrant-libvirt/version
+vagrant-libvirt MAJ.MIN.PATCH.pre.PREPATCH built to pkg/vagrant-libvirt-MAJ.MIN.PATCH.pre.PREPATCH.gem.  
+vagrant-libvirt MAJ.MIN.PATCH.pre.PREPATCH built to pkg/vagrant-libvirt-MAJ.MIN.PATCH.pre.PREPATCH.gem.
+```
+
+It can later be used with Vagrant using
+
+```
+vagrant plugin install path/to/vagrant/pkg/vagrant-libvirt-MAJ.MIN.PATCH.pre.PREPATCH.gem
+```
+
+
 ## Contributing
 
 1. Fork it
